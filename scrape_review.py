@@ -97,7 +97,7 @@ print("finished successfully")
 # visualize distribution of rating with pie chart
 import matplotlib.pyplot as plt
 import pandas as pd
-review_df = pd.read_csv("review_1111.csv")
+review_df = pd.read_csv("review.csv")
 print("shape of the dataframe: ")
 print(review_df.shape)
 print("columns the dataframe: ")
