@@ -96,6 +96,12 @@ print("finished successfully")
 # --------------------------------------------------------------------------------------
 # visualize distribution of rating with pie chart
 import matplotlib.pyplot as plt
+import pandas as pd
+review_df = pd.read_csv("review_1111.csv")
+print("shape of the dataframe: ")
+print(review_df.shape)
+print("columns the dataframe: ")
+print(review_df.columns)
 
 rating_counts = review_df['rating'].value_counts()
 plt.pie(rating_counts, labels=rating_counts.index, autopct='%1.1f%%', startangle=90, pctdistance = 0.7, colors=['darkslategrey', 'darkcyan', 'steelblue', 'lightskyblue', 'lightcyan'], shadow=True)
