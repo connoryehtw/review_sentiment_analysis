@@ -6,7 +6,7 @@ def overall_sa(toAna, stop_words, lemmatizer, word_tokenize, sent_tokenize):
     with open('overall_model.pkl', 'rb') as file:
         model, tfidf, original_columns = pickle.load(file)
     
-    # get integer rating and reviews that have no comment 
+    # get integer rating and remove reviews that have no comment 
     toAna['rating'] =  toAna['rating'].str.split(" ").str[0].astype(int)
     toAna = toAna.dropna(subset=['review'])
 
