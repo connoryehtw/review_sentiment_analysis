@@ -104,7 +104,8 @@ print("columns the dataframe: ")
 print(review_df.columns)
 
 rating_counts = review_df['rating'].value_counts()
-plt.pie(rating_counts, labels=rating_counts.index, autopct='%1.1f%%', startangle=90, pctdistance = 0.7, colors=['darkslategrey', 'darkcyan', 'steelblue', 'lightskyblue', 'lightcyan'], shadow=True)
+plt.pie(rating_counts, labels=rating_counts.index, autopct='%1.1f%%', startangle=90, pctdistance = 0.7, colors=['darkslategrey', 'darkcyan', \
+    'steelblue', 'lightskyblue', 'lightcyan'], shadow=True)
 plt.legend(title="Ratings")
 plt.title('Distribution of Ratings')
 plt.show()
